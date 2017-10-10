@@ -1,5 +1,7 @@
 package f17oct10comp1030;
 
+import java.security.SecureRandom;
+
 /**
  *
  * @author JWright
@@ -30,6 +32,13 @@ public class Dice {
      */
     public void rollDie()
     {
-        
+        //this is a random number generator
+        SecureRandom rng = new SecureRandom();
+        faceValue = rng.nextInt(numOfSides)+1;
+    }
+    
+    public int getFaceValue()
+    {
+        return faceValue;
     }
 }
